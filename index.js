@@ -60,6 +60,7 @@ app.use((req, res, next) => {
 // Controllers
 app.use('/auth', require('./controllers/auth'))
 app.use('/profile', require('./controllers/profile'))
+app.use('/games', require('./controllers/games'))
 
 // Creat a home page route above wildcard route
 app.get('/', (req, res) => {
