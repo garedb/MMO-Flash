@@ -1,45 +1,45 @@
 <nav class="orange lighten-1">
 	<div class="nav-wrapper">
-  		<a href="#" class="brand-logo">MMO-Flash</a>
+  		<a href="/" class="brand-logo">MMO-Flash</a>
   		<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			 <% if (user) { %>
 				<li>
-					<a href="/">Home</a>
-				</li>
-			<% if (user) { %>
-				<li>
-					<a href="/profile/user">Profile Page</a>
+					<a class ="black-text" href="/discussion/show">Game Discussion</a>
 				</li>
 			<% if (user.admin) { %>
 				<li>
-					<a href="/profile/admin">Admin Page</a>
+					<a class ="black-text" href="/profile/admin">Admin Page</a>
 				</li>
 			<% } %>
 				<li>
-					<a href="/auth/logout">Logout</a>
+					<a class ="black-text" href="/profile/user"><%= user.displayname %></a>
 				</li>
 				<li>
-					<%= user.displayname %>
+					<a class ="black-text" href="/auth/logout">Logout</a>
 				</li>
 			<% } else { %>
 				<li>
-					<a href="/auth/login">Login</a>
+					<a class ="black-text" href="/auth/login">Login</a>
 				</li>
-
 				<li>
-					<a href="/auth/signup">Signup</a>
+					<a class ="black-text" href="/auth/signup">Signup</a>
 				</li>
 			<% } %>
+			
   		</ul>
 	</div>
 </nav>
 <ul class="sidenav orange lighten-1" id="mobile-demo">
 		<li>
-			<a href="/">Home</a>
+			<a href="/" class="brand-logo">MMO-Flash</a>
 		</li>
 	<% if (user) { %>
 		<li>
-			<a href="/profile/user">Profile Page</a>
+			<a href="/discussion/show">Game Discussion</a>
+		</li>
+		<li>
+		<a class ="black-text" href="/profile/user"><%= user.displayname %></a>
 		</li>
 	<% if (user.admin) { %>
 		<li>

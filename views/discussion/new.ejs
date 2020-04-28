@@ -1,0 +1,24 @@
+<h1>Make a new post</h1>
+
+<form action="/discussion/new" method="POST">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" required>
+  </div>
+
+  <div class="form-group">
+    <label for="user">User</label>
+    <select name="userId" id="user" class="form-control" required>
+      <% users.forEach(function(user) { %>
+        <option value="<%= user.id %>"><%= user.getFullName() %></option>
+      <% }) %>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea type="text" class="form-control" id="content" name="content" required></textarea>
+  </div>
+
+  <input type="submit" class="btn btn-primary">
+</form>

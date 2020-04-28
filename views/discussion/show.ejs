@@ -1,0 +1,35 @@
+<h1>Game Discussion</h1>
+
+<h3><%= discussion.title %> <small> by <%= discussion.user.getFullName() %></small></h3>
+<p>
+  <strong><%= moment(discussion.createdAt).calendar() %></strong>
+</p>
+
+<p><%= discussion.content %></p>
+
+<hr>
+
+<h2>Comment</h2>
+
+<% if( discussion && discussion.comments) {%>
+  <% discussion.comments.forEach(function(comment) {%>
+    <div>
+    <hr>
+   <%= comment.content %>
+   <br><br>
+  <strong>- <%= comment.name %></strong>
+</div>
+  <%})%>
+<%}%>
+
+
+<hr>
+<form class="form-group" method="POST" action="/discussion/<%= discussion.id %>/comments">
+<label for="name">Name:</label><br>
+<input type="text" name="name" class="col-8"> <br>
+<label for="content">Comment:</label><br>
+<textarea rows="4" cols="50" name="content"></textarea><br><br>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<hr>

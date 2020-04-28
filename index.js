@@ -53,6 +53,8 @@ app.use((req, res, next) => {
 	res.locals.user = req.user
 	next()
 })
+
+app.use(require('morgan')('dev'))
 //*****************************
 //* ROUTES
 //*****************************/
@@ -61,6 +63,7 @@ app.use((req, res, next) => {
 app.use('/auth', require('./controllers/auth'))
 app.use('/profile', require('./controllers/profile'))
 app.use('/games', require('./controllers/games'))
+app.use('/discussion', require('./controllers/discussion'))
 
 // Creat a home page route above wildcard route
 app.get('/', (req, res) => {
