@@ -7,8 +7,6 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    margin: 0px 10px;
-    padding: 0px 10px;
 }
 
 main {
@@ -18,12 +16,16 @@ main {
 nav .brand-logo {
 	font-size: 2rem;
 	color: black;
-	margin: 0px;
-	padding: 0px;
 }
 
-.aa-background {
-    background-image: url(/assets/background/archeage-unchained-background.jpg);
-    background-size: 100% 100%;
+#aa-home {
+    background: url(/assets/background/archeage-unchained-background.jpg);
+    background-size: 100%;
+/*    background-position: absolute;*/
     background-repeat: no-repeat;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
 }
