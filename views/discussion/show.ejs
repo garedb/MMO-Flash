@@ -1,35 +1,28 @@
-<h1>Game Discussion</h1>
-
-<h3><%= discussion.title %> <small> by <%= discussion.user.getFullName() %></small></h3>
-<p>
-  <strong><%= moment(discussion.createdAt).calendar() %></strong>
-</p>
-
-<p><%= discussion.content %></p>
+<h2><%= discussion.title %> </h2>
+<p><h5><strong><%= discussion.content %></strong></h5></p>
+<br>
+<strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(discussion.createdAt).calendar() %> <% if (user) { %>| <a href="/discussion/<%= discussion.id %>/edit">Edit Post</a><% } %></small></strong>
 
 <hr>
 
-<h2>Comment</h2>
-
-<% if( discussion && discussion.comments) {%>
-  <% discussion.comments.forEach(function(comment) {%>
-    <div>
-    <hr>
-   <%= comment.content %>
-   <br><br>
-  <strong>- <%= comment.name %></strong>
-</div>
-  <%})%>
-<%}%>
-
-
+<% discussion.comments.forEach(comments => { %>
+  <p><h5><%= comments.content %></h5></p>
+  <strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(comments.createdAt).calendar() %></small></strong>
 <hr>
-<form class="form-group" method="POST" action="/discussion/<%= discussion.id %>/comments">
-<label for="name">Name:</label><br>
-<input type="text" name="name" class="col-8"> <br>
-<label for="content">Comment:</label><br>
-<textarea rows="4" cols="50" name="content"></textarea><br><br>
-<button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<% })%>
+<% if (user) { %>
+	<form class="form-group" method="POST" action="/discussion/<%= discussion.id %>/comments">
+		<label for="content">Comment:</label><br>
+		<textarea rows="4" cols="50" name="content"></textarea><br><br>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+<% } %>
+<% if (user) { %>
+	<br><form method="POST" action="/discussion/<%=discussion.id%>?_method=DELETE">
+    	<input type="submit" class="btn-small red" value="Delete Post">
+	</form></br>
+<% } %>
 
-<hr>
+
+
+

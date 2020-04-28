@@ -10,6 +10,8 @@ let express = require('express')
 let flash = require('connect-flash')
 let layouts = require('express-ejs-layouts')
 let session = require('express-session')
+let moment = require('moment')
+let methodOverride = require('method-override')
 
 // Create an app instance
 let app = express()
@@ -51,10 +53,12 @@ app.use(passport.session())
 app.use((req, res, next) => {
 	res.locals.alerts = req.flash()
 	res.locals.user = req.user
+	res.locals.moment = moment
 	next()
 })
 
 app.use(require('morgan')('dev'))
+app.use(methodOverride('_method'))
 //*****************************
 //* ROUTES
 //*****************************/

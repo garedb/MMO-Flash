@@ -3,15 +3,10 @@
   		<a href="/" class="brand-logo">MMO-Flash</a>
   		<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			 <% if (user) { %>
 				<li>
-					<a class ="black-text" href="/discussion/show">Game Discussion</a>
+					<a class ="black-text" href="/discussion">Game Discussion</a>
 				</li>
-			<% if (user.admin) { %>
-				<li>
-					<a class ="black-text" href="/profile/admin">Admin Page</a>
-				</li>
-			<% } %>
+			<% if (user) { %>
 				<li>
 					<a class ="black-text" href="/profile/user"><%= user.displayname %></a>
 				</li>
@@ -34,18 +29,13 @@
 		<li>
 			<a href="/" class="brand-logo">MMO-Flash</a>
 		</li>
-	<% if (user) { %>
 		<li>
-			<a href="/discussion/show">Game Discussion</a>
+			<a href="/discussion">Game Discussion</a>
 		</li>
+	<% if (user) { %>
 		<li>
 		<a class ="black-text" href="/profile/user"><%= user.displayname %></a>
 		</li>
-	<% if (user.admin) { %>
-		<li>
-			<a href="/profile/admin">Admin Page</a>
-		</li>
-	<% } %>
 		<li>
 			<a href="/auth/logout">Logout</a>
 		</li>
