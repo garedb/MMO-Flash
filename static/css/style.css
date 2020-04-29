@@ -1,6 +1,6 @@
 html,
 body {
-	background-color: bisque;
+	background-color: lightgrey;
 }
 
 body {
@@ -18,10 +18,15 @@ nav .brand-logo {
 	color: black;
 }
 
-#aa-home {
+#aa-top {
     background: url(/assets/background/archeage-unchained-background.jpg);
-    background-size: 100%;
-/*    background-position: absolute;*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#aa-body {
+    background: url(/assets/background/background-about.jpg);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -29,3 +34,40 @@ section {
     position: relative;
     overflow: hidden;
 }
+
+.aa-yt {
+    margin: 10px;
+}
+
+.aa-tw {
+    margin: 10px;
+}
+
+.aa-logo {
+    margin: 0px 10px;
+
+}
+
+.aa-art1 {
+    float: right;
+    margin: -600px 0px 0px 0px;
+    position: relative;
+    width: 50%;
+}
+
+.aa-art2 {
+    float: right;
+    margin: -350px 0px 0px 0px;
+    position: relative;
+    width: 50%;
+
+}
+
+.aa-art3 {
+    float: right;
+    margin: -100px 0px 0px 0px;
+    position: relative;
+    width: 50%;
+}
+
+
