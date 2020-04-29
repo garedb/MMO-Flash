@@ -1,51 +1,51 @@
-<nav class="orange lighten-1">
+<nav class="page-nav grey darken-4">
 	<div class="nav-wrapper">
   		<a href="/" class="brand-logo">MMO-Flash</a>
   		<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   		<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li>
-					<a class ="black-text" href="/discussion">Game Discussion</a>
-				</li>
 			<% if (user) { %>
 				<li>
-					<a class ="black-text" href="/profile/user"><%= user.displayname %></a>
+					<a class ="white-text" href="/discussion">Game Discussion</a>
 				</li>
 				<li>
-					<a class ="black-text" href="/auth/logout">Logout</a>
+					<a class ="white-text" href="/profile/user"><%= user.displayname %></a>
+				</li>
+				<li>
+					<a class ="white-text" href="/auth/logout">Logout</a>
 				</li>
 			<% } else { %>
 				<li>
-					<a class ="black-text" href="/auth/login">Login</a>
+					<a class ="white-text" href="/auth/login">Login</a>
 				</li>
 				<li>
-					<a class ="black-text" href="/auth/signup">Signup</a>
+					<a class ="white-text" href="/auth/signup">Signup</a>
 				</li>
 			<% } %>
 			
   		</ul>
 	</div>
 </nav>
-<ul class="sidenav orange lighten-1" id="mobile-demo">
+<ul class="sidenav grey darken-4" id="mobile-demo">
 		<li>
-			<a href="/" class="brand-logo">MMO-Flash</a>
-		</li>
-		<li>
-			<a href="/discussion">Game Discussion</a>
+			<a class="white-text" href="/" class="brand-logo">MMO-Flash</a>
 		</li>
 	<% if (user) { %>
 		<li>
-		<a class ="black-text" href="/profile/user"><%= user.displayname %></a>
+			<a class="white-text" href="/discussion">Game Discussion</a>
 		</li>
 		<li>
-			<a href="/auth/logout">Logout</a>
+		<a class="white-text" href="/profile/user"><%= user.displayname %></a>
+		</li>
+		<li>
+			<a class="white-text" href="/auth/logout">Logout</a>
 		</li>
 	<% } else { %>
 		<li>
-			<a href="/auth/login">Login</a>
+			<a class="white-text" href="/auth/login">Login</a>
 		</li>
 
 		<li>
-			<a href="/auth/signup">Signup</a>
+			<a class="white-text" href="/auth/signup">Signup</a>
 		</li>
 	<% } %>
 </ul>

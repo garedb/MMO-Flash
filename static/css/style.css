@@ -1,6 +1,8 @@
 html,
 body {
-	background-color: lightgrey;
+	background-image: url(/assets/background/bg-main.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -15,11 +17,35 @@ main {
 
 nav .brand-logo {
 	font-size: 2rem;
-	color: black;
+	color: white;
+}
+
+.page-nav {
+    background: url(/assets/header/stones-header.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.sidenav {
+    background: url(/assets/background/background-sidebar.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.page-footer {
+    background: url(/assets/footer/stones-footer.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 #aa-top {
     background: url(/assets/background/archeage-unchained-background.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#bd-top {
+    background: url(/assets/background/bd-bg-top.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -30,17 +56,28 @@ nav .brand-logo {
     background-repeat: no-repeat;
 }
 
-section {
-    position: relative;
-    overflow: hidden;
+#bd-body {
+    background: url(/assets/background/bd-bg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;    
 }
 
 .aa-yt {
     margin: 10px;
 }
 
+.bd-yt {
+    margin: 10px;
+}
+
 .aa-tw {
     margin: 10px;
+    position: relative;
+}
+
+.bd-tw {
+    margin: 10px;
+    position: relative;
 }
 
 .aa-logo {
@@ -48,16 +85,21 @@ section {
 
 }
 
+.bd-logo {
+    margin: 10px 160px 0px 20px;
+    float: left;
+}
+
 .aa-art1 {
     float: right;
-    margin: -600px 0px 0px 0px;
+    margin: -740px 0px 0px 0px;
     position: relative;
     width: 50%;
 }
 
 .aa-art2 {
     float: right;
-    margin: -350px 0px 0px 0px;
+    margin: -490px 0px 0px 0px;
     position: relative;
     width: 50%;
 
@@ -65,9 +107,38 @@ section {
 
 .aa-art3 {
     float: right;
-    margin: -100px 0px 0px 0px;
+    margin: -240px 0px 0px 0px;
     position: relative;
     width: 50%;
+}
+
+.bd-art1 {
+    float: right;
+    margin: -760px 100px 0px 0px;
+    position: relative;
+}
+
+.bd-art2 {
+    float: right;
+    margin: -400px 100px 0px 0px;
+    position: relative;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #D4A56A;
+  padding: 5px;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
+
+section {
+    position: relative;
+    overflow: hidden;
 }
 
 
