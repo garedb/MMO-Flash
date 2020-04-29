@@ -50,6 +50,12 @@ nav .brand-logo {
     background-repeat: no-repeat;
 }
 
+#gw-top {
+    background: url(/assets/background/gw-top1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;    
+}
+
 #aa-body {
     background: url(/assets/background/background-about.jpg);
     background-size: 100% 100%;
@@ -62,11 +68,21 @@ nav .brand-logo {
     background-repeat: no-repeat;    
 }
 
+#gw-body {
+    background: url(/assets/background/gw-bg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;     
+}
+
 .aa-yt {
     margin: 10px;
 }
 
 .bd-yt {
+    margin: 10px;
+}
+
+.gw-yt {
     margin: 10px;
 }
 
@@ -76,6 +92,11 @@ nav .brand-logo {
 }
 
 .bd-tw {
+    margin: 10px;
+    position: relative;
+}
+
+.gw-tw {
     margin: 10px;
     position: relative;
 }
@@ -90,16 +111,21 @@ nav .brand-logo {
     float: left;
 }
 
+.gw-logo {
+    margin: 180px 60px 0px 0px;
+    float: right;
+}
+
 .aa-art1 {
     float: right;
-    margin: -740px 0px 0px 0px;
+    margin: -745px 0px 0px 0px;
     position: relative;
     width: 50%;
 }
 
 .aa-art2 {
     float: right;
-    margin: -490px 0px 0px 0px;
+    margin: -495px 0px 0px 0px;
     position: relative;
     width: 50%;
 
@@ -107,20 +133,32 @@ nav .brand-logo {
 
 .aa-art3 {
     float: right;
-    margin: -240px 0px 0px 0px;
+    margin: -245px 0px 0px 0px;
     position: relative;
     width: 50%;
 }
 
 .bd-art1 {
     float: right;
-    margin: -760px 100px 0px 0px;
+    margin: -700px 100px 0px 0px;
     position: relative;
 }
 
 .bd-art2 {
     float: right;
-    margin: -400px 100px 0px 0px;
+    margin: -340px 100px 0px 0px;
+    position: relative;
+}
+
+.gw-art1 {
+    float: right;
+    margin: -700px 150px 0px 0px;
+    position: relative;
+}
+
+.gw-art2 {
+    float: right;
+    margin: -340px 150px 0px 0px;
     position: relative;
 }
 
