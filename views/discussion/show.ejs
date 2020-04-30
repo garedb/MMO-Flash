@@ -1,11 +1,12 @@
 <h2><%= discussion.title %> </h2>
 	<p><h5><strong><%= discussion.content %></strong></h5></p>
 	<br>
-	<strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(discussion.createdAt).calendar() %> <% if (user) { %>| <a href="/discussion/<%= discussion.id %>/edit">Edit Post</a><% } %></small></strong>
+	<strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(discussion.createdAt).calendar() %> <% if (user) { %>| <a href="/discussion/<%= discussion.id %>/edit">Edit Post</a></small></strong>
 		<form method="POST" action="/discussion/<%=discussion.id%>?_method=DELETE">
+			<input type="hidden" name="userId" value="<%=discussion.userId%>">
     		<input type="submit" class="delete-btn btn-small" value="Delete Post">
 		</form>
-
+		<% } %>
 	<hr>
 
 	<% discussion.comments.forEach(comments => { %>

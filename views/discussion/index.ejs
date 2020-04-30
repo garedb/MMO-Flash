@@ -5,9 +5,6 @@
     <h2>
       <a href="/discussion/<%= discussion.id %>"><%= discussion.title %></a>
       </h2>
-    <% if (user) { %>
-      <strong> User: <%= user.getFullName() %> </strong>
-    <% } %>
     <p>
      <small><%= moment(discussion.createdAt).calendar() %></small>
     </p>
