@@ -1,5 +1,5 @@
 <h1>Edit Post</h1>
-<form method="POST" action="/discussion/<%=discussion.id%>/?_method=PUT">
+  <form method="POST" action="/discussion/<%=discussion.id%>/?_method=PUT">
     <div class="form-group">
       <label for="name">Title:</label>
       <%=discussion.title%>
@@ -13,6 +13,7 @@
     </textarea>
     </div>
     <input type="hidden" id="discussionId"  name="id" value="<%=discussion.id%>">
-    <input type="submit" class="btn btn-primary" value="Edit">
+    <input type="submit" class="sign-in btn btn-primary" value="Edit">
 
   </form>
+

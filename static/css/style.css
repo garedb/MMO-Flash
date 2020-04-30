@@ -3,6 +3,7 @@ body {
 	background-image: url(/assets/background/bg-main.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-family: fantasy;
 }
 
 body {
@@ -11,13 +12,25 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    text-align: center;
+}
+
 main {
    flex: 1 0 auto;
+}
+a {
+    color: #A04A00;
+    text-decoration: none;
+}
+
+a:hover {
+    color:red;
 }
 
 nav .brand-logo {
 	font-size: 2rem;
-	color: white;
+    margin: 0px 0px 0px 10px;
 }
 
 .page-nav {
@@ -36,6 +49,12 @@ nav .brand-logo {
     background: url(/assets/footer/stones-footer.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+
+#home-bg {
+    background: url(/assets/background/main-bg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;    
 }
 
 #aa-top {
@@ -127,9 +146,17 @@ nav .brand-logo {
 
 }
 
+.aa-logo-main {
+    margin: 0px 0px 30px 150px;
+}
+
 .bd-logo {
     margin: 10px 160px 0px 20px;
     float: left;
+}
+
+.bd-logo-main {
+    margin: 50px 0px 30px 100px;
 }
 
 .gw-logo {
@@ -137,9 +164,17 @@ nav .brand-logo {
     float: right;
 }
 
+.gw-logo-main {
+    margin: 50px 0px 30px 200px;
+}
+
 .wow-logo {
     margin: 5px 370px 0px 5px;
     float: left;
+}
+
+.wow-logo-main {
+    margin: 50px 0px 30px 50px;
 }
 
 .aa-art1 {
@@ -217,4 +252,34 @@ section {
     overflow: hidden;
 }
 
+.delete-btn {
+    float: right;
+    margin: -30px 10px;
+    background: url(/assets/background/background-sidebar.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: fantasy;
+}
 
+.comment-btn {
+    margin: -30px 0px 0px 10px;
+    background: url(/assets/background/background-sidebar.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: fantasy;
+}
+
+.sign-up {
+    background: url(/assets/background/background-sidebar.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: fantasy;
+}
+
+.sign-in {
+    background: url(/assets/background/background-sidebar.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: fantasy;
+    margin: 10px;    
+}

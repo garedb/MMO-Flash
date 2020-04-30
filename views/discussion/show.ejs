@@ -1,28 +1,22 @@
 <h2><%= discussion.title %> </h2>
-<p><h5><strong><%= discussion.content %></strong></h5></p>
-<br>
-<strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(discussion.createdAt).calendar() %> <% if (user) { %>| <a href="/discussion/<%= discussion.id %>/edit">Edit Post</a><% } %></small></strong>
+	<p><h5><strong><%= discussion.content %></strong></h5></p>
+	<br>
+	<strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(discussion.createdAt).calendar() %> <% if (user) { %>| <a href="/discussion/<%= discussion.id %>/edit">Edit Post</a><% } %></small></strong>
+		<form method="POST" action="/discussion/<%=discussion.id%>?_method=DELETE">
+    		<input type="submit" class="delete-btn btn-small" value="Delete Post">
+		</form>
 
-<hr>
+	<hr>
 
-<% discussion.comments.forEach(comments => { %>
-  <p><h5><%= comments.content %></h5></p>
-  <strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(comments.createdAt).calendar() %></small></strong>
-<hr>
-<% })%>
-<% if (user) { %>
-	<form class="form-group" method="POST" action="/discussion/<%= discussion.id %>/comments">
-		<label for="content">Comment:</label><br>
-		<textarea rows="4" cols="50" name="content"></textarea><br><br>
-		<button type="submit" class="btn btn-primary">Submit</button>
-	</form>
-<% } %>
-<% if (user) { %>
-	<br><form method="POST" action="/discussion/<%=discussion.id%>?_method=DELETE">
-    	<input type="submit" class="btn-small red" value="Delete Post">
-	</form></br>
-<% } %>
-
-
-
-
+	<% discussion.comments.forEach(comments => { %>
+  	<p><h5><%= comments.content %></h5></p>
+  	<strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(comments.createdAt).calendar() %></small></strong>
+	<hr>
+	<% })%>
+	<% if (user) { %>
+		<form class="form-group" method="POST" action="/discussion/<%= discussion.id %>/comments">
+			<label for="content">Comment:</label><br>
+			<textarea rows="4" cols="50" name="content"></textarea><br><br>
+			<button type="submit" class="comment-btn btn-small">Comment</button>
+		</form>
+	<% } %>
