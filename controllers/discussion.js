@@ -49,51 +49,54 @@ router.post('/:id/comments', (req, res) => {
 })
 
 router.put('/:id',(req,res)=>{
-// if (req.user.id == req.body.userId) {
   db.discussion.update({
     content: req.body.content
   }, {
     where: {
-      id: req.body.id
+      id: req.params.id,
+      userId: req.user.id
     }
   }).then(function(discussion) {
     // do something when done updating
-    res.redirect('/discussion/'+req.body.id)
+    res.redirect('/discussion/'+req.params.id)
   })
-// } else {
-//   res.redirect('/')
-// }
+
 })
 
 router.get('/:id/edit',(req,res)=>{
-// if (req.user.id == req.body.userId) {
-  db.discussion.findOne({
-    where: { id: req.params.id }
-  })
-  .then(function(discussion) {
-    if (!discussion) throw Error()
+  // console.log(req.user.id, req.body)
+  // if (req.user.id.toString() == req.body.userId) {
+    db.discussion.findOne({
+      where: { id: req.params.id }
+    })
+    .then(function(discussion) {
+      if (!discussion) throw Error()
+       console.log(req.user.id, discussion.userId)
+      if (req.user.id == discussion.userId) {
        res.render('discussion/edit', { discussion: discussion })
+      } else {
+        res.redirect('/discussion')
+      }
     
-  })
-// } else {
-//   res.redirect('/')
-// }
+    })
+
 })
 
 router.delete('/:id', (req, res) => {
-  // if (req.user.id == req.body.userId) {
+  console.log(req.user.id, req.body)
+  if (req.user.id.toString() == req.body.userId) {
     db.discussion.destroy({
         where: { id: req.params.id}
     })
     .then(() => {
-        res.redirect('/')
+        res.redirect('/discussion')
     })
     .catch(err => {
         console.log('Error in delete route', err)
         res.render('error')
     })
-  // } else {
-  //   res.redirect('/')
-  // }
+  } else {
+    res.redirect('/discussion')
+  }
 })
 module.exports = router

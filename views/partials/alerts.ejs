@@ -1,15 +1,15 @@
 <% if (alerts && alerts.error) { %>
-		<div class="card red lighten-2" style="margin-top: 0px">
+		<div class="alert-card red lighten-2" style="margin-top: 0px">
 			<div class="card-content" style="padding: 0px">
 				<% alerts.error.forEach(e => { %>
-					<p> <%= e %> </p>
+					 <%= e %>
 				<% }) %>
 			</div>	
 		</div>
 <% } %>
 
 <% if (alerts && alerts.success) { %>
-		<div class="card green lighten-2" style="margin-top: 0px">
+		<div class="alert-card green lighten-2" style="margin-top: 0px">
 			<div class="card-content" style="padding: 0px">
 				<% alerts.success.forEach(s => { %>
 					<p> <%= s %> </p>

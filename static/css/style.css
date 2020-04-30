@@ -54,7 +54,8 @@ nav .brand-logo {
 #home-bg {
     background: url(/assets/background/main-bg.jpg);
     background-size: 100% 100%;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
+    height: 85vh;    
 }
 
 #aa-top {
@@ -247,6 +248,14 @@ nav .brand-logo {
   box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
 }
 
+.alert-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 section {
     position: relative;
     overflow: hidden;
@@ -282,8 +291,4 @@ section {
     background-repeat: no-repeat;
     font-family: fantasy;
     margin: 10px;    
-}
-
-.picker__box {
-    
 }
