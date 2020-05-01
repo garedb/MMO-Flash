@@ -57,15 +57,12 @@ router.put('/:id',(req,res)=>{
       userId: req.user.id
     }
   }).then(function(discussion) {
-    // do something when done updating
     res.redirect('/discussion/'+req.params.id)
   })
 
 })
 
 router.get('/:id/edit',(req,res)=>{
-  // console.log(req.user.id, req.body)
-  // if (req.user.id.toString() == req.body.userId) {
     db.discussion.findOne({
       where: { id: req.params.id }
     })

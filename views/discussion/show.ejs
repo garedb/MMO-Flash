@@ -11,7 +11,7 @@
 
 	<% discussion.comments.forEach(comments => { %>
   	<p><h5><%= comments.content %></h5></p>
-  	<strong><small> <%= discussion.user.getFullName() %></a> | <%= moment(comments.createdAt).calendar() %></small></strong>
+  	<strong><small> <%= user.getFullName() %></a> | <%= moment(comments.createdAt).calendar() %></small></strong>
 	<hr>
 	<% })%>
 	<% if (user) { %>

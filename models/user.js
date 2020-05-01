@@ -40,15 +40,12 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     hooks: {
       beforeCreate: pendingUser => {
-        // Hash the password
         let hashedPassword = bcrypt.hashSync(pendingUser.password, 12)
-        // Reassign the hashed password (overwrite the plain text password)
         pendingUser.password = hashedPassword
       }
     }
   })
   user.associate = function(models) {
-    // associations can be defined here
     models.user.hasMany(models.discussion)
   }
 
@@ -57,10 +54,7 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   user.prototype.validPassword = function(typedInPassword) {
-    // Determine if the password typed in hashes to the same thing as the existing hash
     let correctPassword = bcrypt.compareSync(typedInPassword, this.password)
-
-    // Return the (boolen) result of the comparison
     return correctPassword
   }
   return user

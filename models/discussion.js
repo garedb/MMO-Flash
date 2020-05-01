@@ -6,7 +6,6 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER
   }, {});
   discussion.associate = function(models) {
-    // associations can be defined here
     models.discussion.belongsTo(models.user)
     models.discussion.hasMany(models.comment)
   };
