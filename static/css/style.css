@@ -242,6 +242,7 @@ nav .brand-logo {
   background-color: #D4A56A;
   padding: 5px;
   text-align: center;
+  opacity: .9;
 }
 
 .card:hover {
